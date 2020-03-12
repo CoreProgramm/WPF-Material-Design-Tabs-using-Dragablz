@@ -1,0 +1,36 @@
+﻿<Window x:Class="WPFTabMenu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFTabMenu"
+        mc:Ignorable="d"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="CoreProgramm WPF TabMenu"  Height="400" Width="880" ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow" Icon="logo-cp.jpg">
+    <Grid>
+        <Grid >
+            <dragablz:TabablzControl>
+                <dragablz:TabablzControl.InterTabController>
+                    <dragablz:InterTabController/>
+                </dragablz:TabablzControl.InterTabController>
+                <TabItem>
+                    <TabItem.Header>
+                        <materialDesign:PackIcon Kind="Home" Foreground="{DynamicResource PrimaryHueLightBrush}"/>
+                      </TabItem.Header>
+                    <TextBlock Text="Welcome to CoreProgramm Home Page" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </TabItem>
+                <TabItem Header="ABOUT US">
+                    <TextBlock Text="We fousued to serve you better content" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </TabItem>
+                <TabItem Header="CONTANCT">
+                    <TextBlock Text="You can email us in coreprogramm@gmail.com " HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </TabItem>
+                <TabItem Header="WEBSITE">
+                    <TextBlock Text="https://www.coreprogramm.com" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </TabItem>
+            </dragablz:TabablzControl>
+        </Grid>
+    </Grid>
+</Window>
